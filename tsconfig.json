@@ -1,0 +1,21 @@
+{
+  "composite": true,
+  "extends": "./tsconfig.base.json",
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.spec.ts"],
+  "files": [],
+  // "references": [{ "path": "./packages/core" }],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@tldraw/core": ["./packages/core"],
+      "~*": ["./packages/core/src/*"],
+      "state": ["./src/state"],
+      "state/*": ["./src/state/*"],
+      "state/constants": ["./src/state/constants.ts"],
+      "state/mutables": ["./src/state/mutables.ts"],
+      "shapes": ["./src/shapes/index.ts"],
+      "shapes/CustomShapeUtil": ["./src/shapes/CustomShapeUtil.ts"],
+      "stitches.config": ["./src/stitches.config.ts"]
+    }
+  }
+}
